@@ -3,7 +3,7 @@
   "type": "library",
   "description": "最新版支付宝SDK在Yii2封装包。",
   "keywords": ["Yii2", "Yii", "Alipay", "Alipay SDK"],
-  "homepage": "https://github.com/gaoxuxu123/yii2-alipay",
+  "homepage": "https://github.com/gaoxuxu123/easy-pay",
   "license": "MIT",
   "authors": [
     {
