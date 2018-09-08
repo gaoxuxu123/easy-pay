@@ -1,0 +1,27 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Administrator
+ * Date: 2018/9/8
+ * Time: 0:10
+ */
+
+namespace easy\pay\phpqrcode;
+
+
+class QRrsblock extends QRbase{
+    public $dataLength;
+    public $data = array();
+    public $eccLength;
+    public $ecc = array();
+
+    public function __construct($dl, $data, $el, &$ecc, QRrsItem $rs)
+    {
+        $rs->encode_rs_char($data, $ecc);
+
+        $this->dataLength = $dl;
+        $this->data = $data;
+        $this->eccLength = $el;
+        $this->ecc = $ecc;
+    }
+};

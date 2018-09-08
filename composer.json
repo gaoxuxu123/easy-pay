@@ -1,0 +1,24 @@
+{
+  "name": "yii2-alipay/alipay",
+  "type": "library",
+  "description": "最新版支付宝SDK在Yii2封装包。",
+  "keywords": ["Yii2", "Yii", "Alipay", "Alipay SDK"],
+  "homepage": "https://github.com/gaoxuxu123/yii2-alipay",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "moxiaoxuancc",
+      "email": "moxiaoxuancc@126.com"
+    }
+  ],
+  "require": {
+
+    "php": ">=5.4.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "easy\\pay\\": "src/"
+    }
+  },
+  "minimum-stability": "stable"
+}
