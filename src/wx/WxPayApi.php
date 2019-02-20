@@ -429,7 +429,7 @@ class WxPayApi
         try {
             //获取通知的数据
             $xml = $GLOBALS['HTTP_RAW_POST_DATA'];
-            $result = WxPayNotifyResults::Init($config, $xml);
+            $result = WxPayResults::Init($config, $xml);
         } catch (\Exception $e){
             $msg = $e->errorMessage();
             return false;
