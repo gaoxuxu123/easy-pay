@@ -144,7 +144,7 @@ composer require yii2-alipay/alipay dev-master
         $parameter = [
             "out_trade_no"      => \Yii::$app->request->get('out_trade_no'), //商户订单编号；
             "trade_no"          => \Yii::$app->request->get('trade_no'),     //支付宝交易号；
-            "total_fee"         =>  \Yii::$app->request->get('total_fee'),    //交易金额；
+            "total_amount"         =>  \Yii::$app->request->get('total_amount'),    //交易金额；
             "trade_status"      =>  \Yii::$app->request->get('trade_status'), //交易状态
             "notify_id"         =>  \Yii::$app->request->get('notify_id'),    //通知校验ID。
             "notify_time"       =>  \Yii::$app->request->get('notify_time'),  //通知的发送时间。格式为yyyy-MM-dd HH:mm:ss。
@@ -175,7 +175,7 @@ composer require yii2-alipay/alipay dev-master
         $parameter = [
             "out_trade_no"      => \Yii::$app->request->post('out_trade_no'), //商户订单编号；
             "trade_no"          => \Yii::$app->request->post('trade_no'),     //支付宝交易号；
-            "total_fee"         =>  \Yii::$app->request->post('total_fee'),    //交易金额；
+            "total_amount"         =>  \Yii::$app->request->post('total_amount'),    //交易金额；
             "trade_status"      =>  \Yii::$app->request->post('trade_status'), //交易状态
             "notify_id"         =>  \Yii::$app->request->post('notify_id'),    //通知校验ID。
             "notify_time"       =>  \Yii::$app->request->post('notify_time'),  //通知的发送时间。格式为yyyy-MM-dd HH:mm:ss。
