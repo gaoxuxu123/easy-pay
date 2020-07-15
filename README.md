@@ -58,7 +58,7 @@ composer require yii2-alipay/alipay dev-master
 ```
 ```
 
-//支付宝二维码支付 参考当面付
+//支付宝二维码支付 参考当面付 需要支付宝里面开通当面付服务
     public function actionAliScan()
     {
         $payRequestBuilder = new AlipayTradePrecreateContentBuilder();
