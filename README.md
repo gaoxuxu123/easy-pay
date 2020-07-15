@@ -181,24 +181,34 @@ composer require yii2-alipay/alipay dev-master
             "notify_time"       =>  \Yii::$app->request->post('notify_time'),  //通知的发送时间。格式为yyyy-MM-dd HH:mm:ss。
             "buyer_logon_id"       =>  \Yii::$app->request->post('buyer_logon_id'),  //买家支付宝帐号；
         ];
+         $alipay_pub_key = '支付宝公钥';
+         $aop = new AopClient;
+         //支付宝公钥(非应用公钥)
+         $aop->alipayrsaPublicKey =  $alipay_pub_key;
+         $flag = $aop->rsaCheckV1($_POST, $alipay_pub_key, "RSA2");
+         if($flag){
+             if (\Yii::$app->request->post('trade_status') == 'TRADE_SUCCESS') {
 
-        if (\Yii::$app->request->post('trade_status') == 'TRADE_SUCCESS') {
+                 //逻辑处理
 
-            //逻辑处理
-
-            //start
+                 //start
 
 
 
-            //end
+                 //end
 
 
-            //固定返回，请勿修改
-            echo "success";
+                 //固定返回，请勿修改
+                 echo "success";
+             }else{
+
+                 //固定返回，请勿修改
+                 echo "fail";
+             }
         }else{
-
-            //固定返回，请勿修改
-            echo "fail";
+         
+          //固定返回，请勿修改,验签失败
+           echo "fail";
         }
 
     }
