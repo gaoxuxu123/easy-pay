@@ -109,7 +109,7 @@ class AlipayTradeService
         // 首先调用支付api
         $response = $this->aopclientRequestExecute($request, false);
         $json01 = Json::encode($response);
-        $ret = Json::decode($json01);
+        $ret = Json::decode($json01,true);
         if(!empty($ret) && $ret['alipay_trade_precreate_response']['code'] == 10000){
 
             return [
